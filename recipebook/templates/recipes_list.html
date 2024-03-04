@@ -24,8 +24,8 @@
 <h1>Recipe Book</h1>
 <body>
     <ul>
-        {% for recipe in recipes %}
-            <li><a href="/ledger{{recipe.link}}">{{recipe.name}}</li>
+        {% for recipe in object_list %}
+            <li><a href="{{ recipe.get_absolute_url }}">{{recipe.name}}</a></li>
         {% endfor %}
     </ul> 
 </body>

@@ -16,7 +16,8 @@
 
         a { color: #fe921f; text-decoration: underline; }
 
-
+        ul { color: #ffffff; font-family: 'Lato', sans-serif; font-size: 16px; font-weight: 300; line-height: 58px; margin: 0 0 58px; }
+        
         a:hover { color: #ffffff }
 
         body {background-color: #1c2329;}
@@ -25,10 +26,10 @@
     </style>
 </head>
 <body>
-    <h2>{{name}}</h2>
+    <h2>{{object.name}}</h2>
     <ul>
-        {% for ingredient in ingredients %}
-        <li>{{ingredient.name}} - {{ingredient.quantity}}</li>
+        {% for ingredient in object.ingredients.all %}
+            {{ ingredient.ingredient.name }} - {{ ingredient.quantity }}
         {% endfor %}
     </ul>
 
