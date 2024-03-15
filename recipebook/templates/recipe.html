@@ -3,7 +3,11 @@
 {% block title %}
     {{ recipe.name }}
 {% endblock title %}
-<h1>{{ recipe.name }}</h1>
+
+{% block heading %}
+    {{ recipe.name }}
+{% endblock heading%}
+
 {% block content %}
     <h2>by {{ recipe.author }}</h2>
     <ul>
@@ -11,4 +15,5 @@
             <li>{{ ingredient.quantity }} {{ ingredient.ingredient.name }}</li>
         {% endfor %}
     </ul>
+    <a href="/recipes/list">Back to Recipe List <-</a>
 {% endblock content %}
