@@ -18,9 +18,6 @@ class RecipeIngredientInline(admin.StackedInline):
 class IngredientAdmin(admin.ModelAdmin):    
     model = Ingredient
 
-admin.site.register(Recipe, RecipeAdmin)
-admin.site.register(Ingredient, IngredientAdmin)
-
 class ProfileInline(admin.StackedInline):
     model = Profile
     can_delete = False
